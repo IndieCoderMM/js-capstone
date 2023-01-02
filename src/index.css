@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+    list-style-type: none;
+}
+
+ul li{
+    
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 1.6em;
+    color: rgb(22, 24, 117);
+}
+
+ul li a:hover{
+    color: rgb(36, 39, 190);
+    border-bottom: 1px solid rgb(22, 24, 117);
+}
+
+footer p{
+    padding: 1.5rem 2.5rem;
+}
