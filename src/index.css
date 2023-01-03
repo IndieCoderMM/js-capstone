@@ -43,7 +43,7 @@ footer p {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 1rem;
-  background-color: blueviolet;
+  background-color: aliceblue;
   min-height: 70vh;
 }
 
@@ -52,6 +52,8 @@ footer p {
   flex-direction: column;
   background-color: #fff;
   padding: 0.5rem;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  border-radius: 0.25rem;
 }
 
 .card-header {
@@ -67,9 +69,10 @@ footer p {
 }
 
 .frame {
-  background-color: cadetblue;
+  background-color: lightskyblue;
   width: 100%;
   height: 250px;
+  border-radius: 0.25rem;
 }
 
 .card-img {
@@ -78,8 +81,35 @@ footer p {
   object-fit: contain;
 }
 
+.like-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  min-width: 5rem;
+  gap: 0.5rem;
+  background: none;
+  color: crimson;
+  border: solid 1px #333;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.like-btn:hover {
+  box-shadow: 3px 5px 20px #d0d0d0;
+}
+
+.like-btn:active i {
+  transform: scale(1.4);
+}
+
+.like-counter {
+  color: darkslateblue;
+  font-weight: 700;
+}
+
 .comment-btn {
-  width: 60%;
   margin: auto;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.3rem;
 }
