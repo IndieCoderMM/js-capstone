@@ -1,8 +1,12 @@
 import showPopup from './popup-detail.js';
 
-const makeElement = (tag, className) => {
+import likeCounter from './like-counter.js';
+
+const makeElement = (tag, ...classes) => {
   const elem = document.createElement(tag);
-  elem.classList.add(className);
+  classes.forEach((className) => {
+    elem.classList.add(className);
+  });
   return elem;
 };
 
@@ -14,26 +18,33 @@ const makeCharacterCard = (character) => {
   const card = makeElement('section', 'character-card');
   const frame = makeElement('div', 'frame');
   const img = makeElement('img', 'card-img');
-  img.src = character.image;
   const header = makeElement('div', 'card-header');
-  const name = makeElement('h3', 'name');
-  name.innerText = character.name;
+  const name = makeElement('h3', 'card-name');
   const likeBtn = makeElement('button', 'like-btn');
-  likeBtn.innerText = 'Like';
+  const likeIcon = makeElement('i', 'fa-solid', 'fa-heart');
+  const likeCounter = makeElement('span', 'like-counter');
   const commentBtn = makeElement('button', 'comment-btn');
-  commentBtn.id = character.head + character.tail;
+  const commentIcon = makeElement('i', 'fa-regular', 'fa-comment');
+  img.src = character.image;
+  name.innerText = character.name;
+  likeCounter.innerText = `Like ${character.likes}`;
+  commentBtn.id = character.id;
   commentBtn.innerText = 'Comment';
   commentBtn.onclick = showPopup;
   frame.appendChild(img);
+  commentBtn.appendChild(commentIcon);
+  appendChildren(likeBtn, likeIcon, likeCounter);
   appendChildren(header, name, likeBtn);
   appendChildren(card, frame, header, commentBtn);
   return card;
 };
 
-const displayCharacters = (characters) => {
+const displayCharacters = (characters, likedItems) => {
   const galleryContainer = document.querySelector('.gallery');
   galleryContainer.textContent = '';
   characters.forEach((character) => {
+    character.id = character.head + character.tail;
+    character.likes = likeCounter(likedItems, character.id);
     const card = makeCharacterCard(character);
     galleryContainer.appendChild(card);
   });
