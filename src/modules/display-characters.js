@@ -1,3 +1,5 @@
+import showPopup from './popup-detail.js';
+
 import likeCounter from './like-counter.js';
 
 const makeElement = (tag, ...classes) => {
@@ -28,6 +30,7 @@ const makeCharacterCard = (character) => {
   likeCounter.innerText = 'Like ' + character.likes;
   commentBtn.id = character.id;
   commentBtn.innerText = 'Comment';
+  commentBtn.onclick = showPopup;
   frame.appendChild(img);
   commentBtn.appendChild(commentIcon);
   appendChildren(likeBtn, likeIcon, likeCounter);

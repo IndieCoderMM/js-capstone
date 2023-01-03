@@ -13,4 +13,6 @@ const refreshGallery = async () => {
   displayCharacters(characters, likedItems);
 };
 
+// commentBtnClick();
+// closeBtnClick();
 refreshGallery();
