@@ -83,3 +83,18 @@ footer p {
   margin: auto;
   padding: 0.25rem 0.5rem;
 }
+
+/* Popup Section */
+
+.popup {
+  display: none;
+}
+
+ .popup .active{
+  display: block;
+  flex-direction: column;
+  background-color: #fff;
+  height: 500px;
+  width: 100%;
+  z-index: 999;
+} 

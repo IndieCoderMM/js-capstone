@@ -1,3 +1,5 @@
+import showPopup from "./popup-detail.js";
+
 const makeElement = (tag, className) => {
   const elem = document.createElement(tag);
   elem.classList.add(className);
@@ -21,6 +23,7 @@ const makeCharacterCard = (character) => {
   const commentBtn = makeElement('button', 'comment-btn');
   commentBtn.id = character.head + character.tail;
   commentBtn.innerText = 'Comment';
+  commentBtn.onclick = showPopup;
   frame.appendChild(img);
   appendChildren(header, name, likeBtn);
   appendChildren(card, frame, header, commentBtn);
