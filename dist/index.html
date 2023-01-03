@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/9d6e6aaa13.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Disney Wiki</title>
   <script defer src="main.js"></script></head>
   <body>
@@ -26,24 +30,44 @@
         <li><a href="#">Games</a></li>
       </ul>
     </header>
-    <section class="popup active">
-      <h1 class="close-btn">X</h1>
+    <section class="popup">
+      <div class="popup-container">
+        <img class="popup-img" src="" alt="">
       <div class="popup-content">
-         <img class"popup-img" src="" alt="">
-         <h1>Check pop</h1>
+        <h1 class="close-btn">X</h1>
+         <h2 class="pop-name"></h2>
+         <div class="description">
+          <p class="label">Series: <span class="series"></span></p>
+          <p class="label">Game Series: <span class="game-series"></span></p>
+         </div>
+         <div class="comment-section">
+         <h3>Comments(2)</h3>
+         <p>03/11/2021 Alex: I'd love to play this game.</p>
+         <p>03/12/2021 Mia: I love it.</p>
+         </div>
+      <h3>Add a comment</h3>
+      <div class="comment-form">
+        <form action="#">
+          <input type="text" class="name" placeholder="Enter your name">
+          <textarea class="comment" placeholder="Enter Comment"></textarea>
+          <input type="submit" class="submit" value="Comment">
+          </form>
       </div>
+    </div>
+    </div>
     </section>
     <section class="gallery">
-      <section class="character-card">
+      <!-- This section will load dynamically  -->
+      <!-- <section class="character-card">
         <div class="frame">
           <img class="card-img" src="" alt="character" />
         </div>
         <div class="card-header">
-          <h3 class="name">Character</h3>
+          <h3 class="card-name">Character</h3>
           <button type="button" class="like-btn">Like</button>
         </div>
         <button type="button" class="comment-btn">Comment</button>
-      </section>
+      </section> -->
     </section>
   
     <footer>

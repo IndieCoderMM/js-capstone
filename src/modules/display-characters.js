@@ -27,7 +27,7 @@ const makeCharacterCard = (character) => {
   const commentIcon = makeElement('i', 'fa-regular', 'fa-comment');
   img.src = character.image;
   name.innerText = character.name;
-  likeCounter.innerText = 'Like ' + character.likes;
+  likeCounter.innerText = `Like ${character.likes}`;
   commentBtn.id = character.id;
   commentBtn.innerText = 'Comment';
   commentBtn.onclick = showPopup;
