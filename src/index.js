@@ -12,4 +12,3 @@ const refreshGallery = async () => {
 // commentBtnClick();
 // closeBtnClick();
 refreshGallery();
-

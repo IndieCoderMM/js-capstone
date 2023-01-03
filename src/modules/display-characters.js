@@ -1,4 +1,4 @@
-import showPopup from "./popup-detail.js";
+import showPopup from './popup-detail.js';
 
 const makeElement = (tag, className) => {
   const elem = document.createElement(tag);
