@@ -1,7 +1,5 @@
-const API_URL = 'https://www.amiiboapi.com/api/amiibo';
-
-const getCharacters = async () => {
-  const response = await fetch(API_URL);
+const getCharacters = async (apiUrl) => {
+  const response = await fetch(apiUrl + '?type=figure');
   const data = await response.json();
   return data.amiibo;
 };

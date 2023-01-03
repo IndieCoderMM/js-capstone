@@ -1,3 +1,5 @@
+import likeCounter from './like-counter.js';
+
 const makeElement = (tag, className) => {
   const elem = document.createElement(tag);
   elem.classList.add(className);
@@ -17,9 +19,9 @@ const makeCharacterCard = (character) => {
   const name = makeElement('h3', 'name');
   name.innerText = character.name;
   const likeBtn = makeElement('button', 'like-btn');
-  likeBtn.innerText = 'Like';
+  likeBtn.innerText = 'Like (' + character.likes + ')';
   const commentBtn = makeElement('button', 'comment-btn');
-  commentBtn.id = character.head + character.tail;
+  commentBtn.id = character.id;
   commentBtn.innerText = 'Comment';
   frame.appendChild(img);
   appendChildren(header, name, likeBtn);
@@ -27,10 +29,12 @@ const makeCharacterCard = (character) => {
   return card;
 };
 
-const displayCharacters = (characters) => {
+const displayCharacters = (characters, likedItems) => {
   const galleryContainer = document.querySelector('.gallery');
   galleryContainer.textContent = '';
   characters.forEach((character) => {
+    character.id = character.head + character.tail;
+    character.likes = likeCounter(likedItems, character.id);
     const card = makeCharacterCard(character);
     galleryContainer.appendChild(card);
   });
