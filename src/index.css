@@ -47,6 +47,10 @@ footer p {
   min-height: 70vh;
 }
 
+.gallery.hide {
+  display: none;
+}
+
 .character-card {
   display: flex;
   flex-direction: column;
@@ -82,4 +86,118 @@ footer p {
   width: 60%;
   margin: auto;
   padding: 0.25rem 0.5rem;
+}
+
+/* Popup Section */
+
+.popup {
+  display: none;
+}
+
+.popup.active {
+  display: block;
+  flex-direction: column;
+  background-color: blueviolet;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  padding: 0.5rem;
+  overflow-y: scroll;
+}
+
+.popup .close-btn {
+  font-size: 2.5em;
+  font-weight: 900;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  color: rgb(255, 255, 255);
+}
+
+.popup .close-btn:hover {
+  color: rgb(76, 22, 128);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.popup-container {
+  padding: 0 100px;
+  width: 80%;
+  margin-inline: auto;
+  margin-top: 9%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 30px solid rgb(94, 22, 162);
+  background-color: white;
+}
+
+.popup-content {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding-top: 25px;
+}
+
+.popup-content h2 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.popup-content h3 {
+  font-size: 1.6em;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-content p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.popup-img {
+  padding-top: 15%;
+  align-self: flex-start;
+}
+
+.description .label {
+  font-size: 1.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input[type="text"] {
+  padding: 10px 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  height: 40px;
+  font-size: 1.5em;
+}
+
+form textarea {
+  padding: 10px 10px;
+  font-size: 1.5em;
+  border: 2px solid black;
+  border-radius: 7px;
+  height: 100px;
+}
+
+form input[type="submit"] {
+  padding: 10px 10px;
+  font-size: 1.45em;
 }
