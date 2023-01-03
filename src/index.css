@@ -52,7 +52,6 @@ footer p {
   flex-direction: column;
   background-color: #fff;
   padding: 0.5rem;
-  height: fit-content;
 }
 
 .card-header {
@@ -60,10 +59,27 @@ footer p {
   margin: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
 }
 
 .frame {
   background-color: cadetblue;
   width: 100%;
-  height: 150px;
+  height: 250px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.comment-btn {
+  width: 60%;
+  margin: auto;
+  padding: 0.25rem 0.5rem;
 }
