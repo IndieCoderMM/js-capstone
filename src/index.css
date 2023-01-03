@@ -112,4 +112,16 @@ footer p {
   margin: auto;
   padding: 0.5rem;
   font-size: 1.3rem;
+  background-color: cornflowerblue;
+  border: solid 1px cornflowerblue;
+  color: white;
+  border-radius: 0.25em;
+  transition: all 0.3s;
+}
+
+.comment-btn:hover {
+  background-color: white;
+  color: cornflowerblue;
+  box-shadow: 0 3px 10px 0.8px #a2a1a19c;
+  transform: translateY(-3px);
 }
