@@ -3,6 +3,7 @@ import getCharacters from './modules/get-characters.js';
 import displayCharacters from './modules/display-characters.js';
 import updateLikes from './modules/update-likes.js';
 import getLikes from './modules/get-likes.js';
+import getItemCount from './modules/item-counter.js';
 
 const refreshGallery = async () => {
   // Get characters from Api
@@ -12,6 +13,9 @@ const refreshGallery = async () => {
   // Update on the page
   displayCharacters(characters);
   characters.forEach((character) => updateLikes(likedItems, character.id));
+  // Update total items
+  const totalItems = getItemCount();
+  document.querySelector('#item-count').innerText = totalItems;
 };
 
 refreshGallery();
