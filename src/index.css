@@ -100,7 +100,8 @@ footer p {
 }
 
 .like-btn:hover {
-  box-shadow: 3px 5px 20px #d0d0d0;
+  border-color: rgb(255, 165, 177);
+  box-shadow: 0 3px 20px -5px #f23e3e;
 }
 
 .like-btn:active i {
@@ -223,7 +224,7 @@ form {
   gap: 20px;
 }
 
-form input[type="text"] {
+form input[type='text'] {
   padding: 10px 10px;
   border: 2px solid black;
   border-radius: 7px;
@@ -239,7 +240,7 @@ form textarea {
   height: 100px;
 }
 
-form input[type="submit"] {
+form input[type='submit'] {
   padding: 10px 10px;
   font-size: 1.45em;
 }
