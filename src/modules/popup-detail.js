@@ -21,22 +21,22 @@ const getItem = async (itemId) => {
   popTitle.innerHTML = data.amiibo.name;
   series.innerHTML = data.amiibo.amiiboSeries;
   gameSeries.innerHTML = data.amiibo.gameSeries;
+  let i = 0;
   try {
     const comment = await getComments('dRuHy6BFXNSTiZHMOETw', itemId);
     newComment.innerHTML = '';
-    if (comment.length > 0) {
-      numberOfComments.innerHTML = comment.length;
-    } else {
-      numberOfComments.innerHTML = 0;
-    }
     if (comment) {
       comment.forEach((element) => {
-        newComment.innerHTML += `<li>${element.creation_date} <b>${element.username} </b>: ${element.comment}</li>`;
+        if (element.username !== '' && element.comment !== '') {
+          newComment.innerHTML += `<li>${element.creation_date} <b>${element.username} </b>: ${element.comment}</li>`;
+          i += 1;
+        }
       });
     }
   } catch (error) {
     console.log(error);
   }
+  numberOfComments.innerHTML = i;
   submit.addEventListener('click', () => {
     const uname = document.getElementById('name').value;
     const ucomment = document.getElementById('comment').value;
