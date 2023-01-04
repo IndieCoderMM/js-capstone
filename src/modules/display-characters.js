@@ -1,5 +1,4 @@
 import showPopup from './popup-detail.js';
-import likeCounter from './like-counter.js';
 import addLike from './add-like.js';
 
 const makeElement = (tag, ...classes) => {
@@ -30,8 +29,8 @@ const makeCharacterCard = (character) => {
   commentBtn.id = character.id;
   commentBtn.innerText = 'Comment';
   commentBtn.onclick = showPopup;
-  likeCounter.innerText = `Like ${character.likes}`;
-  likeBtn.id = character.id;
+  likeCounter.innerText = `Like 0`;
+  likeBtn.id = `like-${character.id}`;
   likeBtn.onclick = addLike;
   frame.appendChild(img);
   commentBtn.appendChild(commentIcon);
@@ -41,15 +40,15 @@ const makeCharacterCard = (character) => {
   return card;
 };
 
-const displayCharacters = (characters, likedItems) => {
+const displayCharacters = (characters) => {
   const galleryContainer = document.querySelector('.gallery');
   galleryContainer.textContent = '';
   characters.forEach((character) => {
     character.id = character.head + character.tail;
-    character.likes = likeCounter(likedItems, character.id);
     const card = makeCharacterCard(character);
     galleryContainer.appendChild(card);
   });
+  console.log('updated');
 };
 
 export default displayCharacters;
