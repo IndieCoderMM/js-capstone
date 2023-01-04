@@ -12,6 +12,7 @@ const gameSeries = document.querySelector('.game-series');
 const newComment = document.querySelector('.new-comment');
 const submit = document.querySelector('.submit');
 const successMessage = document.getElementById('success-message');
+const numberOfComments = document.getElementById('number-of-comments');
 
 const getItem = async (itemId) => {
   const result = await fetch(`${API_URL}/?id=${itemId}`);
@@ -23,7 +24,11 @@ const getItem = async (itemId) => {
   try {
     const comment = await getComments('dRuHy6BFXNSTiZHMOETw', itemId);
     newComment.innerHTML = '';
-
+    if (comment.length > 0) {
+      numberOfComments.innerHTML = comment.length;
+    } else {
+      numberOfComments.innerHTML = 0;
+    }
     if (comment) {
       comment.forEach((element) => {
         newComment.innerHTML += `<li>${element.creation_date} <b>${element.username} </b>: ${element.comment}</li>`;
