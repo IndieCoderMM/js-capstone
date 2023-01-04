@@ -1,5 +1,7 @@
-const getCharacters = async (apiUrl) => {
-  const response = await fetch(`${apiUrl}?type=figure`);
+import { API_URL } from './constants.js';
+
+const getCharacters = async () => {
+  const response = await fetch(`${API_URL}?type=figure`);
   const data = await response.json();
   return data.amiibo;
 };

@@ -1,6 +1,4 @@
-const INV_API =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const APP_ID = 'dRuHy6BFXNSTiZHMOETw';
+import { INV_API, APP_ID } from './constants.js';
 
 const addLike = async (event) => {
   const id = event.target.closest('.like-btn').id;
