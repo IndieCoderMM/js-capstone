@@ -10,7 +10,7 @@ const refreshGallery = async () => {
   // Get total likes
   const likedItems = await getLikes();
   // Update on the page
-  displayCharacters(characters);
+  // displayCharacters(characters);
   characters.forEach((character) => updateLikes(likedItems, character.id));
 };
 
