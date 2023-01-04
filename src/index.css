@@ -316,6 +316,11 @@ form input[type='submit']:hover {
   color: rgb(35, 167, 35);
 }
 
+#error-message {
+  font-size: 0.5 em;
+  color: rgb(199, 0, 0);
+}
+
 .new-comment {
   list-style-type: none;
   display: flex;
