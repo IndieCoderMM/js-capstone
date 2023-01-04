@@ -189,7 +189,7 @@ footer p {
 .popup.active {
   display: block;
   flex-direction: column;
-  background-color: blueviolet;
+  background-color: cornflowerblue;
   position: fixed;
   top: 0;
   left: 0;
@@ -213,7 +213,7 @@ footer p {
 }
 
 .popup .close-btn:hover {
-  color: rgb(76, 22, 128);
+  color: rgb(44, 97, 195);
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -227,7 +227,7 @@ footer p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 30px solid rgb(94, 22, 162);
+  border: 30px solid rgb(44, 97, 195);
   background-color: white;
 }
 
@@ -277,8 +277,9 @@ form {
 
 form input[type='text'] {
   padding: 10px 10px;
-  border: 2px solid black;
-  border-radius: 7px;
+  border: solid 2px rgb(21, 67, 153);
+  color: rgb(21, 67, 153);
+  border-radius: 0.25em;
   height: 40px;
   font-size: 1.5em;
 }
@@ -286,14 +287,33 @@ form input[type='text'] {
 form textarea {
   padding: 10px 10px;
   font-size: 1.5em;
-  border: 2px solid black;
-  border-radius: 7px;
+  border: solid 2px rgb(21, 67, 153);
+  color: rgb(21, 67, 153);
+  border-radius: 0.25em;
   height: 100px;
 }
 
 form input[type='submit'] {
+  background-color: cornflowerblue;
+  border: solid 1px cornflowerblue;
+  color: white;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: all 0.3s;
   padding: 10px 10px;
   font-size: 1.45em;
+}
+
+form input[type='submit']:hover{
+  background-color: white;
+  color: cornflowerblue;
+  box-shadow: 0 3px 10px 0.8px #a2a1a19c;
+  transform: translateY(-3px);
+}
+
+#success-message{
+  font-size: 0.5 em;
+  color: rgb(35, 167, 35);
 }
 
 .new-comment {
