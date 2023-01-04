@@ -304,14 +304,14 @@ form input[type='submit'] {
   font-size: 1.45em;
 }
 
-form input[type='submit']:hover{
+form input[type='submit']:hover {
   background-color: white;
   color: cornflowerblue;
   box-shadow: 0 3px 10px 0.8px #a2a1a19c;
   transform: translateY(-3px);
 }
 
-#success-message{
+#success-message {
   font-size: 0.5 em;
   color: rgb(35, 167, 35);
 }

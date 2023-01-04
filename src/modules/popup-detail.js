@@ -37,7 +37,6 @@ const getItem = async (itemId) => {
     const ucomment = document.getElementById('comment').value;
     addComment('dRuHy6BFXNSTiZHMOETw', itemId, uname, ucomment);
     successMessage.innerHTML = 'Comment succesfully added. Please reload to see changes.';
-
   });
 };
 
