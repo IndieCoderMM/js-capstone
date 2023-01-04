@@ -12,6 +12,7 @@ const gameSeries = document.querySelector('.game-series');
 const newComment = document.querySelector('.new-comment');
 const submit = document.querySelector('.submit');
 const successMessage = document.getElementById('success-message');
+const errorMessage = document.getElementById('error-message');
 const numberOfComments = document.getElementById('number-of-comments');
 
 const getItem = async (itemId) => {
@@ -40,8 +41,12 @@ const getItem = async (itemId) => {
   submit.addEventListener('click', () => {
     const uname = document.getElementById('name').value;
     const ucomment = document.getElementById('comment').value;
-    addComment('dRuHy6BFXNSTiZHMOETw', itemId, uname, ucomment);
-    successMessage.innerHTML = 'Comment succesfully added. Please reload to see changes.';
+    if (uname !== '' && ucomment !== '') {
+      addComment('dRuHy6BFXNSTiZHMOETw', itemId, uname, ucomment);
+      successMessage.innerHTML = 'Comment succesfully added. Please reload to see changes.';
+    } else {
+      errorMessage.innerHTML = 'Please fill in all the fields.';
+    }
   });
 };
 
