@@ -1,8 +1,12 @@
-const INV_API = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+import { INV_API, APP_ID } from './constants.js';
+import displayErrorPage from './display-error.js';
 
-const getLikes = async (appId) => {
-  const url = `${INV_API + appId}/likes`;
+const getLikes = async () => {
+  const url = `${INV_API + APP_ID}/likes`;
   const response = await fetch(url);
+  if (!response.ok) {
+    displayErrorPage();
+  }
   const data = await response.json();
   return data;
 };

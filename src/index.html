@@ -14,16 +14,11 @@
       src="https://kit.fontawesome.com/9d6e6aaa13.js"
       crossorigin="anonymous"
     ></script>
-    <title>Disney Wiki</title>
+    <title>Pixel Bros</title>
   </head>
   <body>
     <header>
-      <img
-        src="https://imgs.search.brave.com/X_vMcUSSYdGMJg7fI9N8krthFFLFRH4NNg4OqSwh0aY/rs:fit:962:639:1/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOC8w/NS9EaXNuZXktTG9n/by1QTkctRmlsZS1E/b3dubG9hZC1GcmVl/LnBuZw"
-        alt="disney logo"
-        width="80"
-        height="auto"
-      />
+      <h1 class="logo">Pixel Bros</h1>
       <ul>
         <li><a href="index.html">Characters</a></li>
         <li><a href="#">Movies</a></li>
@@ -32,31 +27,32 @@
     </header>
     <section class="popup">
       <div class="popup-container">
-        <img class="popup-img" src="" alt="">
-      <div class="popup-content">
-        <button class="close-btn">X</button>
-         <h2 class="pop-name"></h2>
-         <div class="description">
-          <p class="label">Series: <span class="series"></span></p>
-          <p class="label">Game Series: <span class="game-series"></span></p>
-         </div>
-         <div class="comment-section">
-         <h3>Comments(2)</h3>
-         <ul class="new-comment"></ul>
-         </div>
-      <h3>Add a comment</h3>
-      <div class="comment-form">
-        <form action="#">
-          <input type="text" class="name" placeholder="Enter your name">
-          <textarea class="comment" placeholder="Enter Comment"></textarea>
-          <input type="submit" class="submit" value="Comment">
-          </form>
+        <img class="popup-img" src="" alt="" />
+        <div class="popup-content">
+          <button class="close-btn">X</button>
+          <h2 class="pop-name"></h2>
+          <div class="description">
+            <p class="label">Series: <span class="series"></span></p>
+            <p class="label">Game Series: <span class="game-series"></span></p>
+          </div>
+          <div class="comment-section">
+            <h3>Comments(2)</h3>
+            <ul class="new-comment"></ul>
+          </div>
+          <h3>Add a comment</h3>
+          <div class="comment-form">
+            <form action="#">
+              <input type="text" class="name" placeholder="Enter your name" />
+              <textarea class="comment" placeholder="Enter Comment"></textarea>
+              <input type="submit" class="submit" value="Comment" />
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     </section>
     <section class="gallery">
       <!-- This section will load dynamically  -->
+      <p class="loading-text">📡 Getting data from API ...</p>
       <!-- <section class="character-card">
         <div class="frame">
           <img class="card-img" src="" alt="character" />
@@ -68,7 +64,7 @@
         <button type="button" class="comment-btn">Comment</button>
       </section> -->
     </section>
-  
+
     <footer>
       <hr />
       <p>Created by Microverse under CC License</p>
