@@ -6,10 +6,8 @@ const getLikes = async () => {
   const response = await fetch(url);
   if (!response.ok) {
     displayErrorPage();
-    return;
   }
   const data = await response.json();
-  console.log(data);
   return data;
 };
 

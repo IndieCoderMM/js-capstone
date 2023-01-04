@@ -29,7 +29,7 @@ const makeCharacterCard = (character) => {
   commentBtn.id = character.id;
   commentBtn.innerText = 'Comment';
   commentBtn.onclick = showPopup;
-  likeCounter.innerText = `Like 0`;
+  likeCounter.innerText = 'Like 0';
   likeBtn.id = `like-${character.id}`;
   likeBtn.onclick = addLike;
   frame.appendChild(img);
@@ -48,7 +48,6 @@ const displayCharacters = (characters) => {
     const card = makeCharacterCard(character);
     galleryContainer.appendChild(card);
   });
-  console.log('updated');
 };
 
 export default displayCharacters;
