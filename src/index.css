@@ -206,6 +206,8 @@ footer p {
   top: 2em;
   right: 2em;
   color: rgb(255, 255, 255);
+  background: none;
+  border: none;
 }
 
 .popup .close-btn:hover {
@@ -290,4 +292,12 @@ form textarea {
 form input[type='submit'] {
   padding: 10px 10px;
   font-size: 1.45em;
+}
+
+.new-comment {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.2em;
 }

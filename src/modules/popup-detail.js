@@ -1,3 +1,5 @@
+import getComments from './get-comments.js';
+
 const popup = document.querySelector('.popup');
 const gallery = document.querySelector('.gallery');
 const closeBtn = document.querySelector('.close-btn');
@@ -6,6 +8,7 @@ const popImage = document.querySelector('.popup-img');
 const popTitle = document.querySelector('.pop-name');
 const series = document.querySelector('.series');
 const gameSeries = document.querySelector('.game-series');
+const newComment = document.querySelector('.new-comment');
 
 const getItem = async (itemId) => {
   const result = await fetch(`${API_URL}/?id=${itemId}`);
@@ -14,6 +17,11 @@ const getItem = async (itemId) => {
   popTitle.innerHTML = data.amiibo.name;
   series.innerHTML = data.amiibo.amiiboSeries;
   gameSeries.innerHTML = data.amiibo.gameSeries;
+  const comment = await getComments('dRuHy6BFXNSTiZHMOETw', itemId);
+  newComment.innerHTML = '';
+  comment.forEach((element) => {
+    newComment.innerHTML += `<li><b>${element.username} </b>: ${element.comment}</li>`;
+  });
 };
 
 const showPopup = (e) => {

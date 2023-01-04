@@ -29,7 +29,7 @@
       <div class="popup-container">
         <img class="popup-img" src="" alt="" />
         <div class="popup-content">
-          <h1 class="close-btn">X</h1>
+          <button class="close-btn">X</button>
           <h2 class="pop-name"></h2>
           <div class="description">
             <p class="label">Series: <span class="series"></span></p>
@@ -37,8 +37,7 @@
           </div>
           <div class="comment-section">
             <h3>Comments(2)</h3>
-            <p>03/11/2021 Alex: I'd love to play this game.</p>
-            <p>03/12/2021 Mia: I love it.</p>
+            <ul class="new-comment"></ul>
           </div>
           <h3>Add a comment</h3>
           <div class="comment-form">
@@ -50,18 +49,6 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="error-page hide">
-      <h2>🙁ops!</h2>
-      <p>Something went wrong while fetching the API.</p>
-      <p>Please refresh the page.</p>
-      <button
-        type="button"
-        class="refresh-btn"
-        onclick="window.location.reload()"
-      >
-        Refresh
-      </button>
     </section>
     <section class="gallery">
       <!-- This section will load dynamically  -->
