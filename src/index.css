@@ -133,6 +133,10 @@ footer p {
   transform: translateY(-3px);
 }
 
+.loading-text {
+  font-size: 1.3rem;
+}
+
 /* Error Page  */
 .error-page {
   display: flex;
