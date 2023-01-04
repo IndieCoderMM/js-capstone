@@ -1,4 +1,5 @@
 import getComments from './get-comments.js';
+import addComment from './add-comment.js';
 
 const popup = document.querySelector('.popup');
 const gallery = document.querySelector('.gallery');
@@ -9,6 +10,8 @@ const popTitle = document.querySelector('.pop-name');
 const series = document.querySelector('.series');
 const gameSeries = document.querySelector('.game-series');
 const newComment = document.querySelector('.new-comment');
+const submit = document.querySelector('.submit');
+const successMessage = document.getElementById('success-message');
 
 const getItem = async (itemId) => {
   const result = await fetch(`${API_URL}/?id=${itemId}`);
@@ -17,10 +20,23 @@ const getItem = async (itemId) => {
   popTitle.innerHTML = data.amiibo.name;
   series.innerHTML = data.amiibo.amiiboSeries;
   gameSeries.innerHTML = data.amiibo.gameSeries;
-  const comment = await getComments('dRuHy6BFXNSTiZHMOETw', itemId);
-  newComment.innerHTML = '';
-  comment.forEach((element) => {
-    newComment.innerHTML += `<li><b>${element.username} </b>: ${element.comment}</li>`;
+  try {
+    const comment = await getComments('dRuHy6BFXNSTiZHMOETw', itemId);
+    newComment.innerHTML = '';
+
+    if (comment) {
+      comment.forEach((element) => {
+        newComment.innerHTML += `<li>${element.creation_date} <b>${element.username} </b>: ${element.comment}</li>`;
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+  submit.addEventListener('click', () => {
+    const uname = document.getElementById('name').value;
+    const ucomment = document.getElementById('comment').value;
+    addComment('dRuHy6BFXNSTiZHMOETw', itemId, uname, ucomment);
+    successMessage.innerHTML = 'Comment succesfully added. Please reload to see changes.';
   });
 };
 
