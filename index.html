@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9d6e6aaa13.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Pixel Bros</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <header class="page-header">
+      <h1 class="logo">
+        <a href="#"><i class="fa-solid fa-gamepad"></i><b> PixelBros</b></a>
+      </h1>
+      <ul class="nav">
+        <li>
+          <a href="index.html" class="nav-link active">Characters</a>
+        </li>
+        <li><a href="#" class="nav-link">Series</a></li>
+        <li><a href="#" class="nav-link">Games</a></li>
+      </ul>
+      <p class="total-box">Total Items <span id="item-count">10</span></p>
+    </header>
+    <section class="popup">
+      <div class="popup-container">
+        <img class="popup-img" src="" alt="" />
+        <div class="popup-content">
+          <button class="close-btn">X</button>
+          <h2 class="pop-name"></h2>
+          <div class="description">
+            <p class="label">Series: <span class="series"></span></p>
+            <p class="label">Game Series: <span class="game-series"></span></p>
+          </div>
+          <div class="comment-section">
+            <h3>Comments(<span id="number-of-comments"></span>)</h3>
+            <ul class="new-comment"></ul>
+          </div>
+          <h3>Add a comment</h3>
+          <div class="comment-form">
+            <form action="#">
+              <input type="text" id="name" placeholder="Enter your name" />
+              <textarea id="comment" placeholder="Enter Comment"></textarea>
+              <p id="success-message"></p>
+              <p id="error-message"></p>
+              <input type="submit" class="submit" value="Comment" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery">
+      <!-- This section will load dynamically  -->
+      <p class="loading-text">📡 Getting data from API ...</p>
+      <!-- <section class="character-card">
+        <div class="frame">
+          <img class="card-img" src="" alt="character" />
+        </div>
+        <div class="card-header">
+          <h3 class="card-name">Character</h3>
+          <button type="button" class="like-btn">Like</button>
+        </div>
+        <button type="button" class="comment-btn">Comment</button>
+      </section> -->
+    </section>
+
+    <footer>
+      <hr />
+      <p>Created by Microverse under CC License</p>
+    </footer>
+  </body>
+</html>
