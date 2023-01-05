@@ -1,5 +1,6 @@
 import getComments from './get-comments.js';
 import addComment from './add-comment.js';
+import countComment from './comment-counter.js';
 
 const popup = document.querySelector('.popup');
 const gallery = document.querySelector('.gallery');
@@ -22,7 +23,7 @@ const getItem = async (itemId) => {
   popTitle.innerHTML = data.amiibo.name;
   series.innerHTML = data.amiibo.amiiboSeries;
   gameSeries.innerHTML = data.amiibo.gameSeries;
-  let i = 0;
+  let nOfComments = 0;
   try {
     const comment = await getComments('dRuHy6BFXNSTiZHMOETw', itemId);
     newComment.innerHTML = '';
@@ -30,14 +31,15 @@ const getItem = async (itemId) => {
       comment.forEach((element) => {
         if (element.username !== '' && element.comment !== '') {
           newComment.innerHTML += `<li>${element.creation_date} <b>${element.username} </b>: ${element.comment}</li>`;
-          i += 1;
         }
       });
+      nOfComments = countComment(comment);
     }
   } catch (error) {
-    i = 0;
+    console.log(error);
   }
-  numberOfComments.innerHTML = i;
+
+  numberOfComments.innerHTML = nOfComments;
   submit.addEventListener('click', () => {
     const uname = document.getElementById('name').value;
     const ucomment = document.getElementById('comment').value;
