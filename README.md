@@ -4,56 +4,50 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [💻 PixelBros ](#-pixelbros-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🤝 Contributing ](#-contributing-)
+  - [💖 Show your support ](#-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [PixelBros] <a name="about-project"></a>
+# 💻 PixelBros <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[PixelBros]** is a capstone project made using basic HTML, CSS and javascript at the end of Module 2 during our study in Microverse.
+**PixelBros** is a capstone project made using HTML, CSS and JavaScript at the end of Module 2 during our study in Microverse.
+In this website, users can view all the retro game characters,and add likes/comments on their favourite ones.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>Webpack</li>
-<li>APIs (Amiibo & Involvement)</li>
-<li>Jest (Unit Testing)</li>
-<li>GitHub Project (KanBan Board)</li>
-</ul>
+- HTML, CSS, JavaScript
+- [Amiibo API](https://www.amiiboapi.com/): API for characters data
+- [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270): API for user likes and comments
+- Webpack: Module bundler
+- Jest: Unit testing
+- GitHub Project: KanBan Board for tracking the progress
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[Displays characters in a card.]**
-- **[Like and comment on a character card.]**
+- **Browse through all of the different retro game characters**
+- **Like and comment on your favourite characters**
+- **View other users' likes and comments**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,9 +55,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://indiecodermm.github.io/js-capstone/)
+You can visit the [Live Demo Website](https://indiecodermm.github.io/js-capstone/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,60 +63,65 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need to install all the dependencies:
+In order to run this project you need:
 
-```sh
-  npm init -y
-  npm install
-```
-
+- [Node.js](https://nodejs.org/en/)
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-
 ```sh
-  cd my-folder
-  git clone https://github.com/IndieCoderMM/js-capstone.git
+  cd my-project
+  git clone https://github.com/IndieCoderMM/js-capstone.git .
 ```
 
+### Install
 
+Install the dependencies with:
+
+```sh
+  npm install
+```
 
 ### Usage
 
 To run the project, execute the following command:
 
 ```sh
-  npm run build
-  npm run start
+  npm start
 ```
-
 
 ### Run tests
 
 To run tests, run the following command:
 
 ```sh
-  npm test
+  npm run test
 ```
+
+### Deployment
+
+You can deploy this project using:
+
+```sh
+  npm run build
+```
+
+This will create a production ready build for website in the `dist` directory. You can then deploy this directory on the GitHub Pages.
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Hein Thant**
 
 - GitHub: [@IndieCoderMM](https://github.com/IndieCoderMM)
-- Twitter: [@OoHeinth](https://twitter.com/OoHeinth)
+- Twitter: [@hThantO](https://twitter.com/hThantO)
 - LinkedIn: [hthantoo](https://www.linkedin.com/in/hthantoo)
 
 👤 **Amanuel Worku**
@@ -135,13 +132,11 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+We welcome any contributions to our website! If you have an idea for a new feature or have found a bug, please open an issue or submit a pull request.
 
 Feel free to check the [issues page](https://github.com/IndieCoderMM/js-capstone/issues).
 
@@ -149,11 +144,9 @@ Feel free to check the [issues page](https://github.com/IndieCoderMM/js-capstone
 
 <!-- SUPPORT -->
 
-## ⭐️ Show your support <a name="support"></a>
+## 💖 Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project give it a star. Thanks.
+If you like this project, please consider giving it a ⭐. We really appreciate your support. Thank you!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,12 +154,9 @@ If you like this project give it a star. Thanks.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
 I would like to thank Microverse for giving us this opportunity to work together and work on a project to understand what we have learned.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 
