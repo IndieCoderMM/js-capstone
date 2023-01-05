@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/IndieCoderMM/js-capstone/issues"
   },
-  "homepage": "https://github.com/IndieCoderMM/js-capstone#readme",
+  "homepage": "https://indiecodermm.github.io/js-capstone",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "babel-eslint": "^10.1.0",
