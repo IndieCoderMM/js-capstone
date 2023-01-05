@@ -35,7 +35,7 @@ const getItem = async (itemId) => {
       });
     }
   } catch (error) {
-    console.log(error);
+    i = 0;
   }
   numberOfComments.innerHTML = i;
   submit.addEventListener('click', () => {
