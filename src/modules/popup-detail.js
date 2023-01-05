@@ -36,7 +36,7 @@ const getItem = async (itemId) => {
       nOfComments = countComment(comment);
     }
   } catch (error) {
-    console.log(error);
+    nOfComments = 0;
   }
 
   numberOfComments.innerHTML = nOfComments;
