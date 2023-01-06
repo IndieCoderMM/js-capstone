@@ -1,20 +1,19 @@
-import getComments from './get-comments.js';
 import addComment from './add-comment.js';
-import countComment from './comment-counter.js';
+import updateComments from './update-comments.js';
+import { APP_ID, API_URL } from './constants.js';
 
 const popup = document.querySelector('.popup');
 const gallery = document.querySelector('.gallery');
 const closeBtn = document.querySelector('.close-btn');
-const API_URL = 'https://www.amiiboapi.com/api/amiibo';
 const popImage = document.querySelector('.popup-img');
 const popTitle = document.querySelector('.pop-name');
 const series = document.querySelector('.series');
 const gameSeries = document.querySelector('.game-series');
-const newComment = document.querySelector('.new-comment');
 const submit = document.querySelector('.submit');
 const successMessage = document.getElementById('success-message');
 const errorMessage = document.getElementById('error-message');
-const numberOfComments = document.getElementById('number-of-comments');
+const nameInput = document.getElementById('name');
+const commentInput = document.getElementById('comment');
 
 const getItem = async (itemId) => {
   const result = await fetch(`${API_URL}/?id=${itemId}`);
@@ -23,33 +22,9 @@ const getItem = async (itemId) => {
   popTitle.innerHTML = data.amiibo.name;
   series.innerHTML = data.amiibo.amiiboSeries;
   gameSeries.innerHTML = data.amiibo.gameSeries;
-  let nOfComments = 0;
-  try {
-    const comment = await getComments('dRuHy6BFXNSTiZHMOETw', itemId);
-    newComment.innerHTML = '';
-    if (comment) {
-      comment.forEach((element) => {
-        if (element.username !== '' && element.comment !== '') {
-          newComment.innerHTML += `<li>${element.creation_date} <b>${element.username} </b>: ${element.comment}</li>`;
-        }
-      });
-      nOfComments = countComment(comment);
-    }
-  } catch (error) {
-    nOfComments = 0;
-  }
+  submit.id = `submit-${itemId}`;
 
-  numberOfComments.innerHTML = nOfComments;
-  submit.addEventListener('click', () => {
-    const uname = document.getElementById('name').value;
-    const ucomment = document.getElementById('comment').value;
-    if (uname !== '' && ucomment !== '') {
-      addComment('dRuHy6BFXNSTiZHMOETw', itemId, uname, ucomment);
-      successMessage.innerHTML = 'Comment succesfully added. Please reload to see changes.';
-    } else {
-      errorMessage.innerHTML = 'Please fill in all the fields.';
-    }
-  });
+  await updateComments(itemId);
 };
 
 const showPopup = (e) => {
@@ -65,5 +40,21 @@ const closePopup = () => {
 };
 
 closeBtn.addEventListener('click', closePopup);
+submit.addEventListener('click', async (e) => {
+  const itemId = e.target.id.split('-')[1];
+  const uname = nameInput.value;
+  const ucomment = commentInput.value;
+  if (uname !== '' && ucomment !== '') {
+    const success = await addComment(APP_ID, itemId, uname, ucomment);
+    if (success) {
+      await updateComments(itemId);
+      successMessage.innerHTML = 'Comment succesfully added.';
+      nameInput.value = '';
+      commentInput.value = '';
+    }
+  } else {
+    errorMessage.innerHTML = 'Please fill in all the fields!';
+  }
+});
 
 export default showPopup;

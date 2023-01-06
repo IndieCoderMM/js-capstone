@@ -11,6 +11,7 @@ const refreshGallery = async () => {
   // Get total likes
   const likedItems = await getLikes();
   // Update on the page
+  characters.sort(() => Math.random() - 0.5);
   displayCharacters(characters);
   characters.forEach((character) => updateLikes(likedItems, character.id));
   // Update total items
