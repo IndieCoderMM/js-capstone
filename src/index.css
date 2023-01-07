@@ -358,6 +358,7 @@ footer p {
 
 .popup-img {
   padding-top: 15%;
+  max-width: 50%;
   align-self: flex-start;
 }
 

@@ -1,4 +1,4 @@
-const INV_API = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+import { INV_API } from './constants.js';
 
 const addComment = async (appId, itemId, uname, ucomment) => {
   const url = `${INV_API + appId}/comments?item_id=${itemId}`;
@@ -13,8 +13,7 @@ const addComment = async (appId, itemId, uname, ucomment) => {
       comment: ucomment,
     }),
   });
-  const data = await response.json();
-  return data || null;
+  return response.ok;
 };
 
 export default addComment;
