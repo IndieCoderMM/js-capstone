@@ -18,6 +18,7 @@
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
+  - [🎯 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [💖 Show your support ](#-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -27,8 +28,14 @@
 
 # 💻 PixelBros <a name="about-project"></a>
 
-**PixelBros** is a capstone project made using HTML, CSS and JavaScript at the end of Module 2 during our study in Microverse.
-In this website, users can view all the retro game characters,and add likes/comments on their favourite ones.
+> This is a capstone project we built at the end of JavaScript Module during our study in **Microverse** program.
+
+**PixelBros** is a website where users can view high-quality images of popular retro game characters. Users can also like and comment on their favourite ones and see which characters are the most popular.
+
+The website uses _Amiibo API_ to get information about all popular Nintendo characters from popular franchises such as Super Smash Bros, the Legend of Zelda, and Mario. Whether you're a fan of Mario, Pokemon or any other beloved characters, you'll be able to find them on this website.
+
+<p align="center">
+<img src="./ss-homepage.png" width="45%">&nbsp;&nbsp;&nbsp;<img src="./ss-popup.png" width="45%"></p>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -118,17 +125,28 @@ This will create a production ready build for website in the `dist` directory. Y
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Hein Thant**
+👨‍🚀 **Hein Thant**
 
 - GitHub: [@IndieCoderMM](https://github.com/IndieCoderMM)
 - Twitter: [@hThantO](https://twitter.com/hThantO)
 - LinkedIn: [hthantoo](https://www.linkedin.com/in/hthantoo)
 
-👤 **Amanuel Worku**
+👨‍🚀 **Amanuel Worku**
 
 - GitHub: [@AmanWorku](https://github.com/AmanWorku)
 - Twitter: [@Amexworku](https://twitter.com/Amexworku)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/amanuel-worku-844903213/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎯 Future Features <a name="future-features"></a>
+
+These are the features we want to implement in the upcoming updates.
+
+- [ ] Add a hero section
+- [ ] Implement _search feature_
+- [ ] Add _reservations_
+- [ ] Add _sort-by_ button
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
