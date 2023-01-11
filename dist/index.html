@@ -27,16 +27,27 @@
           ><i class="fa-solid fa-gamepad"></i><b> PixelBros</b></a
         >
       </h1>
+      <div class="search-bar">
+        <form action="#" id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search your favorite character"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
       <ul class="nav">
         <li>
-          <a href="index.html" class="nav-link active">Characters</a>
+          <a href="index.html" class="nav-link active"
+            >Characters (<span id="item-count">10</span>)</a
+          >
         </li>
         <li><a href="#" class="nav-link">Series</a></li>
         <li><a href="#" class="nav-link">Games</a></li>
       </ul>
-      <p class="total-box">
-        <span class="label">Total Items </span><span id="item-count">10</span>
-      </p>
     </header>
     <section class="popup">
       <div class="popup-container">
@@ -54,7 +65,7 @@
           </div>
           <h3>Add a comment</h3>
           <div class="comment-form">
-            <form action="#">
+            <form class="cmt-form" action="#">
               <input type="text" id="name" placeholder="Enter your name" />
               <textarea id="comment" placeholder="Enter Comment"></textarea>
               <p id="success-message"></p>

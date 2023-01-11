@@ -11,7 +11,7 @@
   --red: #dd1c1a;
 }
 
-/* Basic layout  */
+/* Header  */
 
 .page-header {
   display: flex;
@@ -51,9 +51,44 @@
   font-weight: bolder;
 }
 
+.search-bar {
+  flex: 2;
+  padding: 0.25rem;
+}
+
+#search-form {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--blue);
+}
+
+#search-form input {
+  flex: 1;
+  border: none;
+  padding: 0.25rem;
+}
+
+#search-form input:focus {
+  outline: none;
+}
+
+.search-btn {
+  width: 20%;
+  background: var(--red);
+  color: white;
+  border: none;
+  align-self: stretch;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #f23e3e;
+}
+
+/*
 .total-box {
   display: block;
-  /* border: solid 2px darkslateblue; */
   background-color: var(--yellow);
   padding: 0.25rem;
   color: white;
@@ -65,7 +100,7 @@
   height: 100%;
   padding: 0.25rem;
   border-left: solid 1px #fff;
-}
+} */
 
 /* Navigation link animation  */
 .nav-link::after {
@@ -151,6 +186,10 @@ footer p {
   box-shadow: 0 0 20px -8px #d0d0d0cb;
   border-radius: 0.25rem;
   transition: all 0.3s;
+}
+
+.character-card.hide {
+  display: none;
 }
 
 .character-card:hover {
@@ -269,8 +308,10 @@ footer p {
 }
 
 .refresh-btn:hover {
-  box-shadow: -7px -7px 20px 0 rgba(253, 120, 120, 0.4),
-    -4px -4px 5px 0 rgba(255, 120, 120, 0.4), 7px 7px 20px 0 #0002,
+  box-shadow:
+    -7px -7px 20px 0 rgba(253, 120, 120, 0.4),
+    -4px -4px 5px 0 rgba(255, 120, 120, 0.4),
+    7px 7px 20px 0 #0002,
     4px 4px 5px 0 #0001;
 }
 
@@ -364,13 +405,13 @@ footer p {
   font-size: 1.5em;
 }
 
-form {
+.cmt-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-form input[type='text'] {
+.cmt-form input[type='text'] {
   padding: 10px 10px;
   border: solid 2px rgb(21, 67, 153);
   color: rgb(21, 67, 153);
@@ -379,7 +420,7 @@ form input[type='text'] {
   font-size: 1.5em;
 }
 
-form textarea {
+.cmt-form textarea {
   padding: 10px 10px;
   font-size: 1.5em;
   border: solid 2px rgb(21, 67, 153);
@@ -388,7 +429,7 @@ form textarea {
   height: 100px;
 }
 
-form input[type='submit'] {
+.cmt-form input[type='submit'] {
   background-color: cornflowerblue;
   border: solid 1px cornflowerblue;
   color: white;
@@ -399,7 +440,7 @@ form input[type='submit'] {
   font-size: 1.45em;
 }
 
-form input[type='submit']:hover {
+.cmt-form input[type='submit']:hover {
   background-color: white;
   color: cornflowerblue;
   box-shadow: 0 3px 10px 0.8px #a2a1a19c;
@@ -470,11 +511,12 @@ form input[type='submit']:hover {
     padding: 0;
   }
 
+  /*
   .total-box .label {
     display: none;
   }
 
   #item-count {
     border: none;
-  }
+  } */
 }
