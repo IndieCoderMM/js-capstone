@@ -27,19 +27,20 @@
 }
 
 .logo a {
+  font-size: 0.9em;
   text-decoration: none;
   color: var(--red);
 }
 
 .nav {
   display: flex;
-  gap: 2em;
+  gap: 1em;
   list-style-type: none;
 }
 
 .nav-link {
   text-decoration: none;
-  font-size: 1.6em;
+  font-size: 0.9em;
   padding: 0.25rem 0.5rem;
   color: darkblue;
   position: relative;
@@ -52,13 +53,12 @@
 
 .total-box {
   display: block;
-
   /* border: solid 2px darkslateblue; */
   background-color: var(--yellow);
-  padding: 0.5rem;
+  padding: 0.25rem;
   color: white;
   border-radius: 0.25rem;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
 }
 
 #item-count {
@@ -269,10 +269,8 @@ footer p {
 }
 
 .refresh-btn:hover {
-  box-shadow:
-    -7px -7px 20px 0 rgba(253, 120, 120, 0.4),
-    -4px -4px 5px 0 rgba(255, 120, 120, 0.4),
-    7px 7px 20px 0 #0002,
+  box-shadow: -7px -7px 20px 0 rgba(253, 120, 120, 0.4),
+    -4px -4px 5px 0 rgba(255, 120, 120, 0.4), 7px 7px 20px 0 #0002,
     4px 4px 5px 0 #0001;
 }
 

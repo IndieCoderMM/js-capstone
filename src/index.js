@@ -4,6 +4,11 @@ import displayCharacters from './modules/display-characters.js';
 import updateLikes from './modules/update-likes.js';
 import getLikes from './modules/get-likes.js';
 import getItemCount from './modules/item-counter.js';
+import filterCards from './modules/search-items.js';
+
+const searchForm = document.querySelector('#search-form');
+const searchInput = document.querySelector('#search-input');
+const itemCount = document.querySelector('#item-count');
 
 const refreshGallery = async () => {
   // Get characters from Api
@@ -15,8 +20,13 @@ const refreshGallery = async () => {
   displayCharacters(characters);
   characters.forEach((character) => updateLikes(likedItems, character.id));
   // Update total items
-  const totalItems = getItemCount();
-  document.querySelector('#item-count').innerText = totalItems;
+  itemCount.innerText = getItemCount();
 };
 
 refreshGallery();
+
+searchForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  filterCards(searchInput.value.trim());
+  itemCount.innerText = getItemCount();
+});
